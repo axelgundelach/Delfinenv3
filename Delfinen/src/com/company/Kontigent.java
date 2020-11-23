@@ -5,11 +5,13 @@ public class Kontigent {
     private String name;
     private String age;
     private String membership;
+    private String abonnement;
 
-    public Kontigent(String name, String age, String membership) {
+    public Kontigent(String name, String age, String membership, String abonnement) {
         this.name = name;
         this.age = age;
         this.membership = membership;
+        this.abonnement = abonnement;
     }
 
 
@@ -23,6 +25,15 @@ public class Kontigent {
 
     public String getMembership() {
         return this.membership;
+    }
+
+    public String getAbonnement(){
+        return this.abonnement;
+    }
+
+    public String setAbonnement(){
+        this.abonnement = abonnement;
+        return abonnement;
     }
 
     public String toString(){

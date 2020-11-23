@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     Scanner in = new Scanner(System.in);
-    String name, age, membership, niveau, diciplin;
+    String name, age, membership, niveau, diciplin, abonnement;
 
     //sortering af konkurrence svømmere og motionister
     Membership ms = new Membership();
@@ -24,7 +24,8 @@ public class Main {
         } else{
             diciplin = "Not defined";
         }
-        ms.add(name, age, membership);
+        abonnement = "0";
+        ms.add(name, age, membership, abonnement);
     }
 
     public static void main(String[] args) {
