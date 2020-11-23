@@ -31,8 +31,9 @@ public class Kontigent {
         return this.abonnement;
     }
 
-    public String setAbonnement(){
-        this.abonnement = abonnement;
+    public String setAbonnement(int i){
+        String a = String.valueOf(i);
+        this.abonnement = a;
         return abonnement;
     }
 

@@ -17,6 +17,10 @@ public class Membership {
         members.add(kontigent);
     }
 
+    public ArrayList<Kontigent> getList() {
+        return members;
+    }
+
     public void loadList() {
         try {
             Scanner fileReader = new Scanner(new File(FILENAME));
@@ -47,6 +51,22 @@ public class Membership {
         } catch (IOException e) {
             System.out.println("\nI/O exception: " + e + "\n");
         }
+    }
+
+    public String typeCastString(String tal) {
+        for (Kontigent kontingent : members) {
+            int i = Integer.parseInt(kontingent.getAge());
+            if (kontingent.getMembership() == "passivt") {
+                kontingent.setAbonnement(500);
+            } else {
+                if (i <= 18) {
+                    return kontingent.setAbonnement(1000);
+                } else if (i < 59) {
+                    return kontingent.setAbonnement(1600);
+                } else return kontingent.setAbonnement(1600 / 100 * 75);
+            }
+        }
+        return "Fejl";
     }
 
 }

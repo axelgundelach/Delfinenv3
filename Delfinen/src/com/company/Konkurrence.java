@@ -5,12 +5,17 @@ public class Konkurrence {
     private String niveau;
     private String diciplin;
     private String time;
+    private String age;
+    private String name;
 
-    public Konkurrence(String niveau, String diciplin, String time){
+    public Konkurrence(String name, String age, String niveau, String diciplin, String time){
+        this.name = name;
+        this.age = age;
         this.niveau = niveau;
         this.diciplin= diciplin;
         this.time = time;
     }
+
 
     public String getNiveau(){
         return this.niveau;
@@ -22,6 +27,14 @@ public class Konkurrence {
 
     public String getTime(){
         return this.time;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getAge(){
+        return this.age;
     }
 
     public String setNiveau(String time){
