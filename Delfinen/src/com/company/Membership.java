@@ -8,11 +8,11 @@ import java.util.Scanner;
 
 public class Membership {
 
-
     ArrayList<Kontigent> members = new ArrayList<>();
-    private final String FILENAME = "C:\\Users\\Wande\\Desktop\\Members.txt";
+    private final String FILENAME = "/home/axe/Members.txt";
 
-    public void add(String name, String age, String membership, String abonnement){
+
+    public void add(String name, String age, String membership, String abonnement) {
         Kontigent kontigent = new Kontigent(name, age, membership, abonnement);
         members.add(kontigent);
     }
@@ -61,12 +61,11 @@ public class Membership {
             } else {
                 if (i <= 18) {
                     return kontingent.setAbonnement(1000);
-                } else if (i < 59) {
+                } else if (i <=59) {
                     return kontingent.setAbonnement(1600);
                 } else return kontingent.setAbonnement(1600 / 100 * 75);
             }
         }
         return "Fejl";
     }
-
 }
